@@ -38,11 +38,11 @@ public class OrderCardDelivery {
     }
     @Test
     void shouldTest() {
-        city.setValue("Москва");
+        city.setValue("Новосибирск");
         cityClick.waitUntil(exist, 5000).click();
         date.doubleClick().sendKeys(Keys.BACK_SPACE);
         String today = getFutureDate(3);
-        date.setValue("01.02.2020");
+        date.setValue(today);
         name.setValue("Иванов Василий");
         phone.setValue("+79270000000");
         agreement.click();
