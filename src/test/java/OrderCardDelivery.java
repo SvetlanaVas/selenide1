@@ -38,7 +38,7 @@ public class OrderCardDelivery {
     }
     @Test
     void shouldTest() {
-        city.setValue("Новосибирск");
+        city.setValue("Москва");
         cityClick.waitUntil(exist, 5000).click();
         date.doubleClick().sendKeys(Keys.BACK_SPACE);
         String today = getFutureDate(3);
@@ -47,6 +47,6 @@ public class OrderCardDelivery {
         phone.setValue("+79270000000");
         agreement.click();
         button.click();
-        notification.waitUntil(visible, 15000);
+        notification.waitUntil(exist, 15000);
     }
 }
