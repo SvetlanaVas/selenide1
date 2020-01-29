@@ -32,21 +32,22 @@ public class OrderCardDelivery {
         String formattedControlDate = controlDate.format(formatter);
         return formattedControlDate;
     }
-    @BeforeEach
-    void openHost() {
-        open("http://localhost:9999");
-    }
-    @Test
-    void shouldTest() {
-        city.setValue("Москва");
-        cityClick.waitUntil(exist, 5000).click();
-        date.doubleClick().sendKeys(Keys.BACK_SPACE);
-        String today = getFutureDate(3);
-        date.setValue(today);
-        name.setValue("Иванов Василий");
-        phone.setValue("+79270000000");
-        agreement.click();
-        button.click();
-        notification.waitUntil(exist, 15000);
-    }
-}
+
+                @BeforeEach
+                void openHost () {
+                open("http://localhost:9999");
+            }
+                @Test
+                void shouldTest () {
+                city.setValue("Москва");
+                cityClick.waitUntil(exist, 5000).click();
+                date.doubleClick().sendKeys(Keys.BACK_SPACE);
+                String today = getFutureDate(3);
+                date.setValue(today);
+                name.setValue("Иванов Василий");
+                phone.setValue("+79270000000");
+                agreement.click();
+                button.click();
+                notification.waitUntil(exist, 15000);
+            }
+            }
